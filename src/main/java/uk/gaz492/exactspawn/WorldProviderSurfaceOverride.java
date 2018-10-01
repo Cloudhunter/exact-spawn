@@ -1,4 +1,4 @@
-package uk.gaz492.perfectspawn;
+package uk.gaz492.exactspawn;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldProviderSurface;

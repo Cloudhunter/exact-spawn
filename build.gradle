@@ -12,8 +12,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 version = "1.12-1.0.0"
-group = "uk.gaz492.perfectspawn" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "PerfectSpawn"
+group = "uk.gaz492.exactspawn" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "ExactSpawn"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {

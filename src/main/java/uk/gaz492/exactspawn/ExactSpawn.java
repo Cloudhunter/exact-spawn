@@ -1,4 +1,4 @@
-package uk.gaz492.perfectspawn;
+package uk.gaz492.exactspawn;
 
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
@@ -8,10 +8,10 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = PerfectSpawn.MODID, name = PerfectSpawn.NAME, version = "@MOD_VERSION@", dependencies = "after:yunomakegoodmap")
-public class PerfectSpawn {
-    public static final String MODID = "perfectspawn";
-    public static final String NAME = "Perfect Spawn";
+@Mod(modid = ExactSpawn.MODID, name = ExactSpawn.NAME, version = "@MOD_VERSION@", dependencies = "after:yunomakegoodmap")
+public class ExactSpawn {
+    public static final String MODID = "exactspawn";
+    public static final String NAME = "Exact Spawn";
 
     private static Logger logger;
 

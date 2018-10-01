@@ -1,8 +1,8 @@
 [
 {
-  "modid": "perfectspawn",
-  "name": "Perfect Spawn",
-  "description": "Spawns the player in the exact location",
+  "modid": "exactspawn",
+  "name": "Exact Spawn",
+  "description": "Spawns the player in the exact location of the world spawn",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
