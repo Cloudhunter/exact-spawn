@@ -1,0 +1,16 @@
+[
+{
+  "modid": "perfectspawn",
+  "name": "Perfect Spawn",
+  "description": "Spawns the player in the exact location",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Gaz492"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
