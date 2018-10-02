@@ -29,7 +29,7 @@ public class ExactSpawnEventHandler {
 //            Entity player = event.getEntity();
             EntityPlayerMP player = (EntityPlayerMP) event.getEntity();
             World world = event.getWorld();
-            BlockPos playerPos = new BlockPos((int) Math.floor(player.posX), (int) Math.floor(player.posY), (int) Math.floor(player.posZ));
+            BlockPos playerPos = player.getPosition();
 
 
             if (playerPos.getX() == world.getSpawnPoint().getX() && playerPos.getY() == world.getSpawnPoint().getY() && playerPos.getZ() == world.getSpawnPoint().getZ()) {
