@@ -1,0 +1,40 @@
+package uk.gaz492.exactspawn;
+
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraftforge.common.config.ConfigManager;
+import net.minecraftforge.common.config.Config;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+public class ExactSpawnEventHandler {
+
+    /**
+     * Inject the new values and save to the config file when the config has been changed from the GUI.
+     *
+     * @param event The event
+     */
+    @SubscribeEvent
+    public static void onConfigChanged(final ConfigChangedEvent.OnConfigChangedEvent event) {
+        if (event.getModID().equals(ExactSpawn.MODID)) {
+            ConfigManager.sync(ExactSpawn.MODID, Config.Type.INSTANCE);
+        }
+    }
+
+    @SubscribeEvent
+    public void entityJoinWorld(EntityJoinWorldEvent event) {
+        if (event.getEntity() instanceof EntityPlayerMP) {
+//            Entity player = event.getEntity();
+            EntityPlayerMP player = (EntityPlayerMP) event.getEntity();
+            World world = event.getWorld();
+            BlockPos playerPos = new BlockPos((int) Math.floor(player.posX), (int) Math.floor(player.posY), (int) Math.floor(player.posZ));
+
+
+            if (playerPos.getX() == world.getSpawnPoint().getX() && playerPos.getY() == world.getSpawnPoint().getY() && playerPos.getZ() == world.getSpawnPoint().getZ()) {
+                event.getEntity().setPositionAndRotation(player.posX, player.posY, player.posZ, ConfigHandler.spawnSettings.spawnRotationYaw, ConfigHandler.spawnSettings.spawnRotationPitch);
+            }
+        }
+    }
+}

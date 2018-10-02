@@ -6,7 +6,7 @@ import net.minecraft.world.WorldProviderSurface;
 public class WorldProviderSurfaceOverride extends WorldProviderSurface {
 
     @Override
-    public BlockPos getRandomizedSpawnPoint(){
+    public BlockPos getRandomizedSpawnPoint() {
         return new BlockPos(getSpawnPoint());
     }
 }
