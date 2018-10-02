@@ -7,8 +7,10 @@ import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+@Mod.EventBusSubscriber(modid = ExactSpawn.MODID)
 public class ExactSpawnEventHandler {
 
     /**
@@ -24,7 +26,7 @@ public class ExactSpawnEventHandler {
     }
 
     @SubscribeEvent
-    public void entityJoinWorld(EntityJoinWorldEvent event) {
+    public static void entityJoinWorld(EntityJoinWorldEvent event) {
         if (event.getEntity() instanceof EntityPlayerMP) {
 //            Entity player = event.getEntity();
             EntityPlayerMP player = (EntityPlayerMP) event.getEntity();

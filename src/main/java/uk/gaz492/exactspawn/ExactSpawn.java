@@ -23,15 +23,6 @@ public class ExactSpawn {
     }
 
     @EventHandler
-    public void init(FMLInitializationEvent event) {
-    }
-
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
-        MinecraftForge.EVENT_BUS.register(new ExactSpawnEventHandler());
-    }
-
-    @EventHandler
     public void load(FMLInitializationEvent event) {
         DimensionManager.unregisterDimension(0);
         DimensionManager.registerDimension(0, DimensionType.register("Overworld", "", 0, WorldProviderSurfaceOverride.class, true));
