@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = ExactSpawn.MODID, name = ExactSpawn.NAME, version = "@MOD_VERSION@", dependencies = "after:yunomakegoodmap")
+@Mod(modid = ExactSpawn.MODID, name = ExactSpawn.NAME, version = "@MOD_VERSION@", dependencies = "after:yunomakegoodmap", acceptableRemoteVersions = "*")
 public class ExactSpawn {
     public static final String MODID = "exactspawn";
     public static final String NAME = "Exact Spawn";
