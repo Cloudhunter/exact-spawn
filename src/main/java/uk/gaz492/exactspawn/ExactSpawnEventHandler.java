@@ -28,7 +28,6 @@ public class ExactSpawnEventHandler {
     @SubscribeEvent
     public static void entityJoinWorld(EntityJoinWorldEvent event) {
         if (event.getEntity() instanceof EntityPlayerMP) {
-//            Entity player = event.getEntity();
             EntityPlayerMP player = (EntityPlayerMP) event.getEntity();
             World world = event.getWorld();
             BlockPos playerPos = player.getPosition();
