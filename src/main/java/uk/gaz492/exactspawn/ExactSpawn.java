@@ -1,7 +1,6 @@
 package uk.gaz492.exactspawn;
 
 import net.minecraft.world.DimensionType;
-import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
