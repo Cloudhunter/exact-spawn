@@ -14,7 +14,10 @@ public class ConfigHandler {
         public float spawnRotationPitch;
 
         @Config.RequiresWorldRestart
-        @Config.Comment({"Sets the player rotation"})
+        @Config.Comment({
+                "Sets the player rotation",
+                "Alternative min=-180, max=180 (blame Minecraft)"
+        })
         @Config.RangeDouble(min = 0, max = 359)
         public float spawnRotationYaw;
     }

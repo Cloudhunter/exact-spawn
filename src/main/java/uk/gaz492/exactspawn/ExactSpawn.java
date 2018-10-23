@@ -6,7 +6,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
+import uk.gaz492.exactspawn.command.CommandSetSpawnPitchYaw;
 
 @Mod(modid = ExactSpawn.MODID, name = ExactSpawn.NAME, version = "@MOD_VERSION@", dependencies = "after:yunomakegoodmap", acceptableRemoteVersions = "*")
 public class ExactSpawn {
@@ -24,6 +26,11 @@ public class ExactSpawn {
     public void load(FMLInitializationEvent event) {
         DimensionManager.unregisterDimension(0);
         DimensionManager.registerDimension(0, DimensionType.register("Overworld", "", 0, WorldProviderSurfaceOverride.class, true));
+    }
+
+    @EventHandler
+    public void start(FMLServerStartingEvent event){
+        event.registerServerCommand(new CommandSetSpawnPitchYaw());
     }
 
 }
