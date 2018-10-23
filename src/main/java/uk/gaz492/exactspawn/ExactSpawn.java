@@ -1,6 +1,7 @@
 package uk.gaz492.exactspawn;
 
 import net.minecraft.world.DimensionType;
+import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -8,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
-import uk.gaz492.exactspawn.command.CommandSetSpawnPitchYaw;
+import uk.gaz492.exactspawn.command.CommandExactSpawn;
 
 @Mod(modid = ExactSpawn.MODID, name = ExactSpawn.NAME, version = "@MOD_VERSION@", dependencies = "after:yunomakegoodmap", acceptableRemoteVersions = "*")
 public class ExactSpawn {
@@ -20,6 +21,7 @@ public class ExactSpawn {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
+//        ClientCommandHandler.instance.registerCommand(new CommandExactSpawn());
     }
 
     @EventHandler
@@ -30,7 +32,7 @@ public class ExactSpawn {
 
     @EventHandler
     public void start(FMLServerStartingEvent event){
-        event.registerServerCommand(new CommandSetSpawnPitchYaw());
+        event.registerServerCommand(new CommandExactSpawn());
     }
 
 }
