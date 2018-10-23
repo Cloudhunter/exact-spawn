@@ -1,7 +1,6 @@
 package uk.gaz492.exactspawn.command;
 
 import net.minecraft.command.ICommandSender;
-import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.server.command.CommandTreeBase;
 
 public class CommandExactSpawn extends CommandTreeBase {
