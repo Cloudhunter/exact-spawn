@@ -21,6 +21,7 @@ public class ExactSpawn {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
+        ClientCommandHandler.instance.registerCommand(new CommandExactSpawn());
     }
 
     @EventHandler
@@ -31,7 +32,7 @@ public class ExactSpawn {
 
     @EventHandler
     public void start(FMLServerStartingEvent event){
-        event.registerServerCommand(new CommandExactSpawn());
+//        event.registerServerCommand(new CommandExactSpawn());
     }
 
 }

@@ -38,11 +38,6 @@ public class CommandSetSpawnPitch extends CommandBase {
     }
 
     @Override
-    public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos pos) {
-        return super.getTabCompletions(server, sender, args, pos);
-    }
-
-    @Override
     public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
         EntityPlayerMP player = getCommandSenderAsPlayer(sender);
         ConfigHandler.spawnSettings.spawnRotationPitch = roundToHalf(player.getPitchYaw().x);
