@@ -36,10 +36,10 @@ public class CommandSetSpawnPitchYaw extends CommandBase {
     @Override
     public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
         EntityPlayerMP player = getCommandSenderAsPlayer(sender);
-        ConfigHandler.spawnSettings.spawnRotationPitch = roundToHalf(player.getPitchYaw().x);
-        ConfigHandler.spawnSettings.spawnRotationYaw = roundToHalf(player.getPitchYaw().y);
+        ConfigHandler.spawnSettings.spawnRotationPitch = roundToHalf(player.rotationPitch);
+        ConfigHandler.spawnSettings.spawnRotationYaw = roundToHalf(player.rotationYaw);
         ConfigManager.sync(ExactSpawn.MODID, Config.Type.INSTANCE);
-        sender.sendMessage(new TextComponentString("Set spawn pitch to: " + TextFormatting.GREEN + roundToHalf(player.getPitchYaw().x)));
-        sender.sendMessage(new TextComponentString("Set spawn yaw to: " + TextFormatting.GREEN + roundToHalf(player.getPitchYaw().y)));
+        sender.sendMessage(new TextComponentString("Set spawn pitch to: " + TextFormatting.GREEN + roundToHalf(player.rotationPitch)));
+        sender.sendMessage(new TextComponentString("Set spawn yaw to: " + TextFormatting.GREEN + roundToHalf(player.rotationYaw)));
     }
 }
