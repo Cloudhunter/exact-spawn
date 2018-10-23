@@ -34,7 +34,8 @@ public class ExactSpawnEventHandler {
 
 
             if (playerPos.equals(world.getSpawnPoint())) {
-                event.getEntity().setPositionAndRotation(player.posX, player.posY, player.posZ, ConfigHandler.spawnSettings.spawnRotationYaw, ConfigHandler.spawnSettings.spawnRotationPitch);
+                player.connection.setPlayerLocation(player.posX, player.posY, player.posZ, ConfigHandler.spawnSettings.spawnRotationYaw, ConfigHandler.spawnSettings.spawnRotationPitch);
+//                event.getEntity().setPositionAndRotation(player.posX, player.posY, player.posZ, ConfigHandler.spawnSettings.spawnRotationYaw, ConfigHandler.spawnSettings.spawnRotationPitch);
             }
         }
     }
