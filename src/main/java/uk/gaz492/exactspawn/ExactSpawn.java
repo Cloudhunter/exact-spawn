@@ -21,7 +21,6 @@ public class ExactSpawn {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
-//        ClientCommandHandler.instance.registerCommand(new CommandExactSpawn());
     }
 
     @EventHandler
