@@ -38,6 +38,6 @@ public class CommandSetSpawnYaw extends CommandBase {
         EntityPlayerMP player = getCommandSenderAsPlayer(sender);
         ConfigHandler.spawnSettings.spawnRotationYaw = roundToHalf(player.rotationYaw);
         ConfigManager.sync(ExactSpawn.MODID, Config.Type.INSTANCE);
-        sender.sendMessage(new TextComponentString("Set spawn yaw to: " + TextFormatting.GREEN + roundToHalf(player.rotationYaw)));
+        sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "[ExactSpawn] Set spawn yaw to: " + TextFormatting.GREEN + roundToHalf(player.rotationYaw)));
     }
 }

@@ -39,7 +39,7 @@ public class CommandSetSpawnPitchYaw extends CommandBase {
         ConfigHandler.spawnSettings.spawnRotationPitch = roundToHalf(player.rotationPitch);
         ConfigHandler.spawnSettings.spawnRotationYaw = roundToHalf(player.rotationYaw);
         ConfigManager.sync(ExactSpawn.MODID, Config.Type.INSTANCE);
-        sender.sendMessage(new TextComponentString("Set spawn pitch to: " + TextFormatting.GREEN + roundToHalf(player.rotationPitch)));
-        sender.sendMessage(new TextComponentString("Set spawn yaw to: " + TextFormatting.GREEN + roundToHalf(player.rotationYaw)));
+        sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "[ExactSpawn] Set spawn pitch to: " + TextFormatting.GREEN + roundToHalf(player.rotationPitch)));
+        sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "[ExactSpawn] Set spawn yaw to: " + TextFormatting.GREEN + roundToHalf(player.rotationYaw)));
     }
 }

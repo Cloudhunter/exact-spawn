@@ -38,6 +38,6 @@ public class CommandSetSpawnPitch extends CommandBase {
         EntityPlayerMP player = getCommandSenderAsPlayer(sender);
         ConfigHandler.spawnSettings.spawnRotationPitch = roundToHalf(player.rotationPitch);
         ConfigManager.sync(ExactSpawn.MODID, Config.Type.INSTANCE);
-        sender.sendMessage(new TextComponentString("Set spawn pitch to: " + TextFormatting.GREEN + roundToHalf(player.rotationPitch)));
+        sender.sendMessage(new TextComponentString(TextFormatting.GRAY + "[ExactSpawn] Set spawn pitch to: " + TextFormatting.GREEN + roundToHalf(player.rotationPitch)));
     }
 }
